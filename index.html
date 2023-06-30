@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo"></div>
+
+        </div>
+        </div>
+    </header>
+    <main class="content">
+        <section class="profile">
+            <div class="profile__container">
+                <img src=".\images\avatar.svg" alt="" class="profile__avatar">
+                <div class="profile-info">
+                    <h1 class="profile-info__title">Жак-Ив Кусто</h1>
+                    <button class="profile-info__edit-button" type="button"></button>
+                    <p class="profile-info__intro">Исследователь океана</p>
+
+                </div>
+
+                <button class="profile__add-button" type="button">
+                </button>
+            </div>
+        </section>
+        <section class="elements">
+            <ul class="elements__container">
+                <li class="element">
+                    <img class="element__image" src="./images/karachaevsk.svg" alt="Сентинский храм">
+                    <div class="element__heading">
+                        <h2 class="element__title">Карачаевск</h2>
+                        <button class="element__like-button" type="button"></button>
+                    </div>
+                </li>
+
+                <li class="element">
+                    <img class="element__image" src="./images/elbrus.svg" alt="Эльбрус на закате">
+                    <div class="element__heading">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <button class="element__like-button element__like-button_active" type="button"></button>
+                    </div>
+                </li>
+
+                <li class="element">
+                    <img class="element__image" src="./images/dombay.svg" alt="Домбайская Поляна">
+                    <div class="element__heading">
+                        <h2 class="element__title">Домбай</h2>
+                        <button class="element__like-button" type="button"></button>
+                    </div>
+                </li>
+
+                <li class="element">
+                    <img class="element__image" src="./images/elbrus.svg" alt="Эльбрус на закате">
+                    <div class="element__heading">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <button class="element__like-button" type="button"></button>
+                    </div>
+                </li>
+
+                <li class="element">
+                    <img class="element__image" src="./images/dombay.svg" alt="Домбайская Поляна">
+                    <div class="element__heading">
+                        <h2 class="element__title">Домбай</h2>
+                        <button class="element__like-button" type="button"></button>
+                    </div>
+                </li>
+
+                <li class="element">
+                    <img class="element__image" src="./images/karachaevsk.svg" alt="Сентинский храм">
+                    <div class="element__heading">
+                        <h2 class="element__title">Карачаево-Черкессия</h2>
+                        <button class="element__like-button" type="button"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__copyright">&#169 2020 Mesto Russia</p>
+            </div>
+        </footer>
+    </main>
+    <div class="popup popup_edit-profile">
+        <div class="popup__container">
+            <button class="popup__close" type="button"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="popup__form popup__form_edit-profile" name="profile-info" method="get" novalidate>
+                <label for="popup__name">
+                    <input class="popup__input popup__input-name" type="text" id="name" name="input-name" placeholder="Имя" required
+                        minlength="2" maxlength="40">
+                </label>
+
+                <label for="popup__job">
+                    <input class="popup__input popup__input-job" type="text" id="info" name="input-info" placeholder="О себе" required
+                        minlength="2" maxlength="40">
+                </label>
+                <button class="popup__submit" type="submit">Сохранить</button>
+            </form>
+                    </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>

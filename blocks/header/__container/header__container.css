@@ -1,0 +1,15 @@
+.header__container {
+    max-width: 880px;
+    
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid #545454;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .header__container {
+      padding: 0 0 13.6px 0;
+    }
+  }

@@ -1,0 +1,13 @@
+.profile-info__intro {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .profile-info__intro {
+      font-size: 14px;
+      text-align: center;
+      line-height: 14px;
+    }
+  }
