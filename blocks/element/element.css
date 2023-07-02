@@ -4,8 +4,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    outline: 1px solid green;
-  }
+      }
   
   @media screen and (max-width: 650px) {
     .element {

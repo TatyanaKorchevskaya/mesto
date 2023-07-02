@@ -19,15 +19,15 @@
     <main class="content">
         <section class="profile">
             <div class="profile__container">
-                <img src=".\images\avatar.svg" alt="" class="profile__avatar">
+                <img src="./images/avatar.svg" alt="Аватар пользователя (Жак Ив Кусто)" class="profile__avatar">
                 <div class="profile-info">
                     <h1 class="profile-info__title">Жак-Ив Кусто</h1>
-                    <button class="profile-info__edit-button" type="button"></button>
+                    <button class="profile-info__edit-button" aria-label="Редактировать профиль" type="button"></button>
                     <p class="profile-info__intro">Исследователь океана</p>
 
                 </div>
 
-                <button class="profile__add-button" type="button">
+                <button class="profile__add-button" aria-label="Добавить" type="button">
                 </button>
             </div>
         </section>
@@ -84,22 +84,22 @@
         </section>
         <footer class="footer">
             <div class="footer__container">
-                <p class="footer__copyright">&#169 2020 Mesto Russia</p>
+                <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
             </div>
         </footer>
     </main>
-    <div class="popup popup_edit-profile">
+    <div class="popup">
         <div class="popup__container">
             <button class="popup__close" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form popup__form_edit-profile" name="profile-info" method="get" novalidate>
+            <form class="popup__form" name="profile-info" method="get" novalidate>
                 <label for="popup__name">
-                    <input class="popup__input popup__input-name" type="text" id="name" name="input-name" placeholder="Имя" required
+                    <input class="popup__input popup__input_name" type="text" id="popup__name" name="input-name" placeholder="Имя" required
                         minlength="2" maxlength="40">
                 </label>
 
                 <label for="popup__job">
-                    <input class="popup__input popup__input-job" type="text" id="info" name="input-info" placeholder="О себе" required
+                    <input class="popup__input popup__input_job" type="text" id="popup__job" name="input-info" placeholder="О себе" required
                         minlength="2" maxlength="40">
                 </label>
                 <button class="popup__submit" type="submit">Сохранить</button>
