@@ -10,16 +10,12 @@
 
 <body class="page">
     <header class="header">
-        <div class="header__container">
-            <div class="header__logo"></div>
-
-        </div>
-        
+        <div class="header__logo"></div>
     </header>
     <main class="content">
         <section class="profile">
             <div class="profile__container">
-                <img src="./images/avatar.svg" alt="Аватар пользователя (Жак Ив Кусто)" class="profile__avatar">
+                <img src="./images/avatar.png" alt="Аватар пользователя (Жак Ив Кусто)" class="profile__avatar">
                 <div class="profile-info">
                     <h1 class="profile-info__title">Жак-Ив Кусто</h1>
                     <button class="profile-info__edit-button" aria-label="Редактировать профиль" type="button"></button>
@@ -83,9 +79,7 @@
             </ul>
         </section>
         <footer class="footer">
-            <div class="footer__container">
-                <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
-            </div>
+            <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
         </footer>
     </main>
     <div class="popup">
@@ -94,18 +88,19 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="profile-info" method="get" novalidate>
                 <label for="popup__name">
-                    <input class="popup__input popup__input_name" type="text" id="popup__name" name="input-name" placeholder="Имя" required
-                        minlength="2" maxlength="40">
+                    <input class="popup__input popup__input_type_name" type="text" id="popup__name" name="input-name"
+                        placeholder="Имя" required minlength="2" maxlength="40">
                 </label>
 
                 <label for="popup__job">
-                    <input class="popup__input popup__input_job" type="text" id="popup__job" name="input-info" placeholder="О себе" required
-                        minlength="2" maxlength="40">
+                    <input class="popup__input popup__input_type_job" type="text" id="popup__job" name="input-info"
+                        placeholder="О себе" required minlength="2" maxlength="40">
                 </label>
                 <button class="popup__submit" type="submit">Сохранить</button>
             </form>
-                    </div>
+        </div>
     </div>
     <script src="./scripts/index.js"></script>
 </body>
+
 </html>

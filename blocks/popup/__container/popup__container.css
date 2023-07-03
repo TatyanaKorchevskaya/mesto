@@ -10,6 +10,7 @@
   padding: 34px 36px 37px 36px;
   box-sizing: border-box;
   position: relative;
+  min-height: 330px;
 }
 
 @media screen and (max-width: 480px) {
@@ -17,5 +18,6 @@
     width: 80%;
     min-width: 282px;
     padding: 25px 22px;
+    min-height: 322px;
   }
 }

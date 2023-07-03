@@ -12,7 +12,7 @@
   transition: opacity 0.5s ease;
   padding: 0;
   margin-top: 18px;
-  line-height: normal;
+  line-height: 21.78px;
 }
 
 .popup__submit:hover {
@@ -21,9 +21,9 @@
 
 @media screen and (max-width: 480px) {
   .popup__submit {
-    margin-top: 15px;
-    text-align: center;
+    margin-top: 19px;
     font-size: 14px;
     font-weight: 400;
+    line-height: 16.94px;
   }
 }
