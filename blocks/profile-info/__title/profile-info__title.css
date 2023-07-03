@@ -11,6 +11,13 @@
   white-space: nowrap;
 }
 
+@media screen and (max-width: 680px) {
+  .profile-info__title {
+    max-width: 250px;
+    font-size: 32px;
+     }
+}
+
 @media screen and (max-width: 480px) {
   .profile-info__title {
     max-width: 189px;

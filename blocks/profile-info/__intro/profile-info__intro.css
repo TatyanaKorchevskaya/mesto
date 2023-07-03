@@ -9,6 +9,13 @@
   line-height: 21.78px;
 }
 
+@media screen and (max-width: 680px) {
+  .profile-info__intro {
+    max-width: 300px;
+    font-size: 16px;
+        }
+    }
+
 @media screen and (max-width: 480px) {
   .profile-info__intro {
     font-size: 14px;
