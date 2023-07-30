@@ -108,16 +108,16 @@
             <button class="popup__close" type="button"></button>
             <h2 class="popup__title">Новое место</h2>
             <form class="popup__form popup__form_create" name="card-form" novalidate>
-                <label for="place__name">
-                    <input class="popup__input popup__input_type_place" type="text" id="place__name" name="input-place"
+                <label for="popup__place">
+                    <input class="popup__input popup__input_type_place" type="text" id="popup__place" name="input-place"
                         placeholder="Название" minlength="2" maxlength="30" required>
-                    <span class="popup__error place__name-error"></span>
+                    <span class="popup__error popup__place-error"></span>
                 </label>
 
-                <label for="place__link">
-                    <input class="popup__input popup__input_type_link" type="url" id="place__link" name="input-link"
+                <label for="popup__link">
+                    <input class="popup__input popup__input_type_link" type="url" id="popup__link" name="input-link"
                         placeholder="Ссылка на фото" minlength="2" maxlength="200" required>
-                    <span class="popup__error place__link-error"></span>
+                    <span class="popup__error popup__link-error"></span>
                 </label>
                 <button class="popup__button" type="submit">Создать</button>
             </form>
