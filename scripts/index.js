@@ -1,4 +1,5 @@
 import { initialCards } from "./cards.js";
+import { enableValidation } from "./validate.js";
 
 const profileInfoEditButton = document.querySelector(
   ".profile-info__edit-button"
@@ -14,7 +15,7 @@ const placeInput = document.querySelector(".popup__input_type_place");
 const linkInput = document.querySelector(".popup__input_type_link");
 const profileName = document.querySelector(".profile-info__title");
 const profileJob = document.querySelector(".profile-info__intro");
-const closeButtons = document.querySelectorAll('.popup__close');
+const closeButtons = document.querySelectorAll(".popup__close");
 
 const container = document.querySelector(".elements__container");
 const template = document.querySelector("#element-template").content;
@@ -59,7 +60,6 @@ profileInfoEditButton.addEventListener("click", () => {
 cardAddButton.addEventListener("click", () => {
   openPopup(popupAdd);
 });
-
 
 function render() {
   card.forEach(renderCard);
@@ -108,7 +108,7 @@ function handleCardFormSubmit(evt) {
   evt.preventDefault();
   const newLi = getCard(placeInput.value, linkInput.value);
   container.prepend(newLi);
-  evt.target.reset()
+  evt.target.reset();
   closePopup(popupAdd);
 }
 
@@ -126,6 +126,32 @@ function togglePopupImage(evt) {
 cardForm.addEventListener("submit", handleCardFormSubmit);
 
 closeButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-   button.addEventListener('click', () => closePopup(popup));
+  const popup = button.closest(".popup");
+  button.addEventListener("click", () => closePopup(popup));
 });
+
+document.querySelectorAll(".popup").forEach((popup) => {
+  popup.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("popup")) {
+      closePopup(popup);
+    }
+  });
+});
+
+window.addEventListener("keydown", (evt) => {
+  const popupOpened = document.querySelector('.popup_opened')
+  if (evt.key === "Escape" && popupOpened != null) {
+    closePopup(popupOpened);
+  }
+});
+
+const validationConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
+
+enableValidation(validationConfig);
