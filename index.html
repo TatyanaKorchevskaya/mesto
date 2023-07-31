@@ -88,13 +88,13 @@
             <button class="popup__close" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="profile-info" method="get" novalidate>
-                <label for="popup__name">
+                <label class='popup__label-first' for="popup__name">
                     <input class="popup__input popup__input_type_name" type="text" id="popup__name" name="input-name"
                         placeholder="Имя" minlength="2" maxlength="40" required>
                     <span class="popup__error popup__name-error"></span>
                 </label>
 
-                <label for="popup__job">
+                <label class='popup__label-last' for="popup__job">
                     <input class="popup__input popup__input_type_job" type="text" id="popup__job" name="input-info"
                         placeholder="О себе" minlength="2" maxlength="200" required>
                     <span class="popup__error popup__job-error"></span>
@@ -108,13 +108,13 @@
             <button class="popup__close" type="button"></button>
             <h2 class="popup__title">Новое место</h2>
             <form class="popup__form popup__form_create" name="card-form" novalidate>
-                <label for="popup__place">
+                <label class='popup__label-first' for="popup__place">
                     <input class="popup__input popup__input_type_place" type="text" id="popup__place" name="input-place"
                         placeholder="Название" minlength="2" maxlength="30" required>
                     <span class="popup__error popup__place-error"></span>
                 </label>
 
-                <label for="popup__link">
+                <label class='popup__label-last' for="popup__link">
                     <input class="popup__input popup__input_type_link" type="url" id="popup__link" name="input-link"
                         placeholder="Ссылка на фото" minlength="2" maxlength="200" required>
                     <span class="popup__error popup__link-error"></span>
