@@ -102,6 +102,7 @@ function handleCardFormSubmit(evt) {
   cardsContainer.prepend(newCardElement);
   evt.target.reset();
   closePopup(popupAdd);
+  enableValidation(validationConfig)
 }
 
 function togglePopupImage(evt) {
