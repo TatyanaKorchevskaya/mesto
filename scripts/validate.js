@@ -60,4 +60,4 @@ function disableSubmitButton(button, config) {
   button.classList.add(config.inactiveButtonClass);
   button.disabled = true;
 }
-export { enableValidation };
+export { enableValidation, disableSubmitButton };

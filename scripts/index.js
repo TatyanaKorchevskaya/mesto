@@ -1,5 +1,5 @@
 import { initialCards } from "./cards.js";
-import { enableValidation } from "./validate.js";
+import { enableValidation, disableSubmitButton } from "./validate.js";
 
 const profileInfoEditButton = document.querySelector(
   ".profile-info__edit-button"
@@ -26,6 +26,15 @@ const zoomDescription = document.querySelector(".popup__description");
 const profileForm = document.forms["profile-info"];
 const cardForm = document.forms["card-form"];
 
+const validationConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
+
 function fillProfileInputs() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
@@ -34,6 +43,8 @@ function fillProfileInputs() {
 function openPopup(el) {
   el.classList.add("popup_opened");
   window.addEventListener("keydown", closePopupEsc);
+  const button = el.querySelector(".popup__button");
+  disableSubmitButton(button, validationConfig)
 }
 
 function closePopupEsc(evt) {
@@ -102,7 +113,7 @@ function handleCardFormSubmit(evt) {
   cardsContainer.prepend(newCardElement);
   evt.target.reset();
   closePopup(popupAdd);
-  enableValidation(validationConfig)
+  // enableValidation(validationConfig)
 }
 
 function togglePopupImage(evt) {
@@ -131,14 +142,7 @@ document.querySelectorAll(".popup").forEach((popup) => {
   });
 });
 
-const validationConfig = {
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
-};
+
 
 enableValidation(validationConfig);
 
