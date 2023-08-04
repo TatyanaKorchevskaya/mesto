@@ -43,8 +43,6 @@ function fillProfileInputs() {
 function openPopup(el) {
   el.classList.add("popup_opened");
   window.addEventListener("keydown", closePopupEsc);
-  const button = el.querySelector(".popup__button");
-  disableSubmitButton(button, validationConfig)
 }
 
 function closePopupEsc(evt) {
@@ -155,4 +153,6 @@ profileInfoEditButton.addEventListener("click", () => {
 
 cardAddButton.addEventListener("click", () => {
   openPopup(popupAdd);
+  const button = popupAdd.querySelector(".popup__button");
+  disableSubmitButton(button, validationConfig)
 });
